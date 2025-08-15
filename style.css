@@ -1,0 +1,76 @@
+:root{
+  --bg:#0a1020; --card:#0d152a; --accent:#7c3aed; --muted:#94a3b8; --text:#e6eef8;
+  --glass:rgba(255,255,255,.06); --radius:16px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:linear-gradient(180deg,#070d1d,var(--bg)); color:var(--text)}
+.container{max-width:1150px;margin:0 auto;padding:24px}
+
+/* Header/Nav */
+.header{position:sticky;top:0;z-index:20;background:rgba(6,12,24,.55);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.brand{font-weight:800;letter-spacing:.2px}
+.brand span{color:#38bdf8}
+.nav a{color:var(--text);text-decoration:none;margin-left:16px;opacity:.85}
+.nav a.active,.nav a:hover{opacity:1;color:#a5b4fc}
+
+/* Hero */
+.hero{padding:80px 10px;text-align:center}
+.hero h1{font-size:42px;line-height:1.06;margin:0}
+.lead{font-size:18px;margin-top:10px}
+.accent{color:var(--accent)}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:4px;animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid transparent;transition:transform .2s, box-shadow .2s}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.18)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border-color:var(--glass);color:var(--text)}
+.btn.ghost:hover{border-color:#607699}
+
+/* Grid & Cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg,var(--card),#08101f);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.06);box-shadow:0 12px 40px rgba(2,6,23,.45)}
+.card h3{margin:8px 0}
+.icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#0ea5a8,#7c3aed)}
+.badge{display:inline-block;padding:4px 8px;border:1px solid rgba(255,255,255,.08);border-radius:999px;font-size:12px;color:var(--muted);margin-right:6px}
+
+/* Forms / Inputs */
+.form{display:flex;flex-direction:column;gap:10px}
+.input, select, textarea{padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:var(--text);outline:none}
+.input:focus, select:focus, textarea:focus{border-color:#6ee7ff}
+textarea{min-height:120px;resize:vertical}
+
+/* Lists */
+.list{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.item{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:14px;border-radius:12px}
+.item .meta{font-size:13px;color:var(--muted)}
+
+/* Footer */
+.footer{padding:28px;text-align:center;border-top:1px solid rgba(255,255,255,.06);background:rgba(6,12,24,.4);margin-top:40px}
+
+/* Background blobs */
+.bg-blobs{position:fixed;inset:0;pointer-events:none;z-index:-1}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.18;mix-blend-mode:screen;animation:blob 14s ease-in-out infinite}
+.b1{width:520px;height:520px;left:-120px;top:-80px;background:#7c3aed}
+.b2{width:380px;height:380px;right:-120px;bottom:-80px;background:#06b6d4;animation-delay:2s}
+.b3{width:420px;height:420px;left:20%;bottom:-120px;background:#f97316;animation-delay:4s}
+@keyframes blob{0%{transform:translateY(0) scale(1)}33%{transform:translateY(-40px) scale(1.08)}66%{transform:translateY(20px) scale(.94)}100%{transform:translateY(0) scale(1)}}
+
+/* Reveal / Float */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s, transform .7s cubic-bezier(.2,.9,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.float{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* Tables (dashboard) */
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{border:1px solid rgba(255,255,255,.08);padding:10px;text-align:left}
+.table th{background:rgba(255,255,255,.05)}
+
+/* Mobile */
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.hero h1{font-size:34px}}

@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="hi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Post Project — Freelance Connect</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="bg-blobs"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+<header class="header">
+  <div class="brand">Freelance<span>Connect</span></div>
+  <nav class="nav">
+    <a href="index.html">होम</a><a href="projects.html">प्रोजेक्ट्स</a>
+    <a href="profiles.html">प्रोफाइल्स</a><a href="project-new.html" class="active">पोस्ट प्रोजेक्ट</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card reveal">
+    <h2>नया प्रोजेक्ट पोस्ट करें</h2>
+    <form id="projectNewForm" class="form">
+      <input class="input" name="title" placeholder="प्रोजेक्ट टाइटल" required>
+      <textarea name="desc" placeholder="डिटेल्स" required></textarea>
+      <input class="input" name="budget" type="number" placeholder="बजट (₹)" required>
+      <input class="input" name="skills" placeholder="स्किल्स, कॉमा सेपरेटेड (उदा: web, react)">
+      <button class="btn primary" type="submit">पोस्ट करें</button>
+    </form>
+    <p class="muted">डेमो में यह डेटा लोकलस्टोरेज में सेव होगा।</p>
+  </div>
+</main>
+
+<footer class="footer">© 2025 Freelance Connect Demo</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>

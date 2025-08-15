@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="hi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects — Freelance Connect</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="bg-blobs"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+<header class="header">
+  <div class="brand">Freelance<span>Connect</span></div>
+  <nav class="nav">
+    <a href="index.html">होम</a><a href="projects.html" class="active">प्रोजेक्ट्स</a>
+    <a href="profiles.html">प्रोफाइल्स</a><a href="project-new.html">पोस्ट प्रोजेक्ट</a>
+    <a href="login.html">लॉगिन</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h2 class="reveal">ओपन प्रोजेक्ट्स</h2>
+  <div class="reveal" style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0">
+    <input id="projectSearch" class="input" placeholder="सर्च: skill, title, budget...">
+    <select id="projectSort" class="input">
+      <option value="new">Newest</option>
+      <option value="budget">Highest Budget</option>
+    </select>
+    <a class="btn primary" href="project-new.html">+ नया प्रोजेक्ट</a>
+  </div>
+  <div id="projectList" class="list reveal"></div>
+</main>
+
+<footer class="footer">© 2025 Freelance Connect Demo</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>
